@@ -10,8 +10,8 @@
     text-align: center;
     outline: none;
     width: 100%;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    height: 100%;
+    padding: 8%;
 }
 
 .answerStyle:hover {
