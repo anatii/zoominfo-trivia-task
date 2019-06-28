@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
     styleUrls: ['./answer.component.css']
 })
 export class AnswerComponent {
+    isAnswerClicked = true;
+    isCorrectAnswer = true;
+    isOkClicked = true;
+    answer = 'yes';
+
+    onAnswerClick() {
+
+    }
 }

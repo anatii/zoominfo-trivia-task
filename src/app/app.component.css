@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+.pageContainer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    align-items: center;
+}
+
+.topStage {
+    transform:rotate(180deg);
+    width: 100%;
+}
+
+.logo {
+    position: absolute;
+    align-items: flex-start;
+    width: 20%;
+    padding: 1.5%;
+}
+
+.quizContainer {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 25px;
+}
+
+.answersContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 1170px;
+    margin: 0 auto;
+    justify-content: center;
+    width: 100%;
+}
+.answerStyle {
+    width: 48%;
+    margin-right: 2%;
+    margin-top: 2%;
+}
+
+.answerStyle:nth-child(2n) {
+    margin-right: 0;
+}
+
+.bottomStage {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+}
