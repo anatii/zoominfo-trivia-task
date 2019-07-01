@@ -1,1 +1,5 @@
-<button>OK</button>
+<button class="okButton" [ngClass]="{'okState0Style': okState == 0, 'okState1Style': okState == 1, 'okState2Style': okState == 2}"
+        (click) = "onOkClick(okState)">
+  <span [ngClass]="{'hide': okState == 2}">OK</span>
+  <span [ngClass]="{'hide': okState != 2}">Continue</span>
+</button>

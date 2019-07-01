@@ -1,1 +1,12 @@
-<button class="answerStyle">{{answer}}</button>
+<button class="container"
+        [ngClass]="{'disable': okState == 2, 'state0Style': answer != chosenAnswer,
+        'state1Style': okState == 1 && answer == chosenAnswer,
+         'state2Style': isCorrectAnswer == true && okState == 2 && answer == chosenAnswer,
+          'state3Style': isCorrectAnswer == false && okState == 2 && answer == chosenAnswer}"
+          (click) = "onAnswerClick(answer)">
+  <img src="../../assets/images/x.png" alt="x" class="indicationImg"
+       [ngClass]="{'hideIndicationImg': !(okState == 2 && isCorrectAnswer == false && answer == chosenAnswer)}">
+  <img src="../../assets/images/v.png" alt="v" class="indicationImg"
+       [ngClass]="{'hideIndicationImg': !(okState == 2 && isCorrectAnswer == true && answer == chosenAnswer)}">
+  <span class="textStyle" [innerHTML]="answer"></span>
+</button>

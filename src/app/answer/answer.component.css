@@ -1,55 +1,54 @@
-.answerStyle {
+.container {
     background: #FAFAFA;
-    border: 2px solid #D9E6EB;
     border-radius: 23px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 28px;
-    color: #496472;
-    letter-spacing: 0;
-    text-align: center;
     outline: none;
-    width: 100%;
-    height: 100%;
-    padding: 8%;
+    width: 48%;
+    height: 40%;
+    padding: 4.5%;
+    align-items: center;
+    margin: 1%;
 }
 
-.answerStyle:hover {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+.state0Style {
+    border: 2px solid #D9E6EB;
+    color: #496472;
 }
 
-.selectedStyle {
-    background: #FAFAFA;
+.state0Style:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.state1Style {
     border: 4px solid #0D7BAB;
-    border-radius: 23px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 28px;
     color: #0D7BAB;
-    letter-spacing: 0;
-    text-align: center;
 }
 
-.correctStyle {
-    background: #FAFAFA;
+.state2Style {
     border: 4px solid #33C933;
-    border-radius: 23px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 28px;
     color: #33C933;
-    letter-spacing: 0;
-    text-align: center;
 }
 
-.incorrectStyle {
-    background: #FAFAFA;
+.state3Style {
     border: 4px solid #FB4343;
-    border-radius: 23px;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: 600;
-    font-size: 28px;
     color: #FB4343;
-    letter-spacing: 0;
-    text-align: center;
+}
+
+.hideIndicationImg {
+    display: none;
+}
+
+.indicationImg {
+    width: 9%;
+    float: left;
+}
+
+.disable {
+    pointer-events: none;
+}
+
+.textStyle {
+    margin: auto;
 }

@@ -20,7 +20,7 @@
 }
 
 .questionStyle {
-    margin-top: 3.5%;
+    margin-top: 2.5%;
     margin-bottom: 1%;
     width: 85%;
     display: flex;
@@ -31,7 +31,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    justify-content: center;
+    align-items: center;
     width: 75%;
     height: 100%;
     flex-grow: 1;
@@ -40,17 +40,18 @@
 .answerStyle {
     flex-grow: 1;
     width: 48%;
-    margin-right: 2%;
-    margin-top: 2%;
-}
-
-.answerStyle:nth-child(2n) {
-    margin-right: 0;
 }
 
 .okStyle {
-    margin-top: 3%;
+    margin-top: 1%;
     margin-bottom: 2%;
+    width: 25%;
+}
+
+.progressStyle {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 25%;
 }
 

@@ -1,7 +1,13 @@
-span {
+.dot {
     border-radius: 50%;
     width: 15px;
     height: 15px;
+}
+
+.gray {
+    background: #C9CFD3;
+}
+
+.blue {
     background: #0D7BAB;
-    display: flex;
 }

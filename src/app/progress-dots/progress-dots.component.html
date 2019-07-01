@@ -1,1 +1,4 @@
-<span class="dot"></span>
+<div *ngFor="let dot of arrayOne(length); let i = index;">
+  <div class="dot" [ngClass]="{'blue': i <= index, 'gray': i > index}"></div>
+</div>
+

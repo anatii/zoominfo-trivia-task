@@ -1,17 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'app-answer',
     templateUrl: './answer.component.html',
     styleUrls: ['./answer.component.css']
 })
+
 export class AnswerComponent {
-    isAnswerClicked = true;
-    isCorrectAnswer = true;
-    isOkClicked = true;
-    answer = 'yes';
+    @Input() answer;
+    @Input() isCorrectAnswer;
+    @Input() okState;
+    @Input() chosenAnswer;
+    @Output() answerClickToParent = new EventEmitter();
 
-    onAnswerClick() {
-
+    onAnswerClick(answer) {
+        this.answerClickToParent.emit(answer);
     }
 }

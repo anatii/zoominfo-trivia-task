@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   selector: 'app-progress-dots',
   templateUrl: './progress-dots.component.html',
   styleUrls: ['./progress-dots.component.css']
 })
-export class ProgressDotsComponent implements OnInit {
 
-  constructor() { }
+export class ProgressDotsComponent {
+  @Input() index;
+  @Input() length;
 
-  ngOnInit() {
+  arrayOne(n: number): any[] {
+    return Array(n);
   }
-
 }

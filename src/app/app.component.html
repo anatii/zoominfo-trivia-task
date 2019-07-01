@@ -1,26 +1,21 @@
-<div class="pageContainer">
+<div class="pageContainer" *ngIf="data">
   <img src="../assets/images/stage.png" alt="top stage" class="topStage">
-  <img src="../assets/images/Group%204.png" alt="logo" class="logo">
+  <img src="../assets/images/logo.png" alt="logo" class="logo">
   <div class="questionStyle">
-    <app-question></app-question>
+    <app-question [index]="index" [question]="data[index].question"></app-question>
   </div>
   <div class="answersContainer">
       <div class="answerStyle">
-        <app-answer></app-answer>
-      </div>
-      <div class="answerStyle">
-            <app-answer></app-answer>
-      </div>
-      <div class="answerStyle">
-          <app-answer></app-answer>
-      </div>
-      <div class="answerStyle">
-          <app-answer></app-answer>
+        <app-answer *ngFor="let answer of data[index].answers"
+            [answer]="answer['text']"
+            [isCorrectAnswer]="answer.isCorrect"
+            [okState]="okState % 3"
+            [chosenAnswer]="chosenAnswer"
+            (answerClickToParent)="getChosenAnswer($event)">
+        </app-answer>
       </div>
   </div>
-  <div class="okStyle">
-      <app-ok-button></app-ok-button>
-  </div>
-  <app-progress-dots></app-progress-dots>
+  <app-ok-button class="okStyle" [okState]="okState % 3" (okStateToParent)="getOkState($event)"></app-ok-button>
+  <app-progress-dots [index]="index" [length]="data.length" class="progressStyle"></app-progress-dots>
   <img src="../assets/images/stage.png" alt="bottom stage" class="bottomStage">
 </div>

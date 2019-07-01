@@ -1,17 +1,32 @@
-button {
+.okButton {
     background: #F0F0F0;
     border-radius: 100px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     font-size: 30px;
     color: #FFFFFF;
-    letter-spacing: 0;
     text-align: center;
     outline: none;
     width: 100%;
     padding: 2% 0;
 }
 
-button:hover {
+.okState0Style {
+    pointer-events: none;
+}
+
+.okState1Style {
+    background: #FF8F48;
+}
+.okState1Style:hover {
     background: #F68034;
+}
+
+.okState2Style {
+    background: #FF8F48;
+    content:'Continue';
+}
+
+.hide {
+    display: none;
 }
